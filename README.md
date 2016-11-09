@@ -19,7 +19,7 @@ y copiar las blueprints al sitio elegido)
 2. Ir al código del módulo recien descargado: *cd node_modules/angular-cli-env*
 3. En *node_modules/angular-cli-env/index* añadir la propiedad *blueprintsPath* de la siguiente manera:
 
-```
+```js
 blueprintsPath: function () {
   return path.join(__dirname, './lib/blueprints');
 }
@@ -28,7 +28,7 @@ blueprintsPath: function () {
 4. Modificar comando *ng env:init* en *node_modules/angular-cli-env/lib/commands/env-init.js*, extender el 
 objeto que exporta con EmberGenerateCommand.extend, por ejemplo quedaría asi:
 
-```
+```js
 var EmberGenerateCommand = require('ember-cli/lib/commands/generate');
 
 module.exports = EmberGenerateCommand.extend({
@@ -45,7 +45,7 @@ module.exports = EmberGenerateCommand.extend({
 
 6. Añadir en *node_modules/angular-cli-env/lib/blueprints/index.js* despues del método **, lo siguiente:
 
-```
+```js
 beforeRun: function (rawArgs) {
     if (!rawArgs.length) {
       return;
@@ -84,10 +84,21 @@ beforeRun: function (rawArgs) {
   },
 ```
 
-7. Copiar los blueprints a node_modules/angular-cli-env/lib/blueprints. Dentro del paquete de angular-cli
+7. Añadir los imports al mismo fichero, *node_modules/angular-cli-env/lib/blueprints/index.js*:
+
+```js
+var EmberGenerateCommand = require('ember-cli/lib/commands/generate');
+var path = require('path');
+var Blueprint = require('ember-cli/lib/models/blueprint');
+var SilentError = require('silent-error');
+```
+
+8. Para finalizar con los cambios en este fichero, comentar el metodo run.
+
+9. Copiar los blueprints a node_modules/angular-cli-env/lib/blueprints. Dentro del paquete de angular-cli
 en *node_modules/angular_cli/blueprints* hay ejemplos. Yo me he basado en el código de *component*.
 
-8. Copiar las utilidades que usa angular-cli al usar comandos de *node_modules/angular_cli/utilities*
+10. Copiar las utilidades que usa angular-cli al usar comandos de *node_modules/angular_cli/utilities*
 a *node_modules/angular-cli-env/lib/utilities* para que no haya problemas con las utilidades que necesitan los blueprints copiados
 y poder seguir adelante. Luego se decidira si nos sirven o no.
 
@@ -104,7 +115,7 @@ This addon has the following prerequisites:
 Run this inside your Angular CLI project:
 
 ```sh
-npm install --save-dev angular-cli-env
+npm install aitoribanez/angular-cli-generate-entity --save-dev
 ```
 
 ## Usage
