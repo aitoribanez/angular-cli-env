@@ -102,7 +102,7 @@ en *node_modules/angular_cli/blueprints* hay ejemplos. Yo me he basado en el có
 a *node_modules/angular-cli-env/lib/utilities* para que no haya problemas con las utilidades que necesitan los blueprints copiados
 y poder seguir adelante. Luego se decidira si nos sirven o no.
 
-Comando: ng env:init env friend
+Comando: ng generate:entity entity friend321
 ## Prerequisites
 
 This addon has the following prerequisites:
