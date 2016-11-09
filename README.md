@@ -9,6 +9,45 @@ This addon can generate a constant file from `env.json` so that your environment
 
 For more [details](https://github.com/antonybudianto/angular-cli-env/wiki/About)
 
+## Pasos seguidos para customizar el addon llamado angular-cli-env para que use blueprints
+
+(hacer uso del "hook" blueprintsPath, extender el objeto de configuracion del comando a EmberGenerateCommand.extend
+y copiar las blueprints al sitio elegido)
+
+0. Tener la última version de angular-cli funcionado.
+1. Descargarse el paquete *npm i angular-cli-env* en ella.
+2. Ir al código del módulo recien descargado: *cd node_modules/angular-cli-env*
+3. En *node_modules/angular-cli-env/index* añadir la propiedad *blueprintsPath* de la siguiente manera:
+
+```
+blueprintsPath: function () {
+  return path.join(__dirname, './lib/blueprints');
+}
+```
+
+4. Modificar comando *ng env:init* en *node_modules/angular-cli-env/lib/commands/env-init.js*, extender el 
+objeto que exporta con EmberGenerateCommand.extend, por ejemplo quedaría asi:
+
+```
+var EmberGenerateCommand = require('ember-cli/lib/commands/generate');
+
+module.exports = EmberGenerateCommand.extend({
+  name: 'env:init',
+  aliases: ['env:init'],
+  description: 'Initialize env templates',
+  works: 'insideProject',
+
+  availableOptions: []
+})
+```
+4. Copiar los blueprints a node_modules/angular-cli-env/lib/blueprints. Dentro del paquete de angular-cli
+en *node_modules/angular_cli/blueprints* hay ejemplos. Yo me he basado en el código de *component*.
+
+(5. Copiar las utilidades que usa angular-cli al usar comandos de *node_modules/angular_cli/utilities*
+a *node_modules/angular-cli-env/lib/utilities* para que no errores y poder seguir adelante. Luego se
+decidira si nos sirven o no.)
+
+Comando: ng env:init env friend
 ## Prerequisites
 
 This addon has the following prerequisites:
