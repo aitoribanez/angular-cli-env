@@ -1,3 +1,6 @@
+## 0.3.0
+- Start to use ember-cli's blueprint as angular-cli do.
+
 ## 0.2.0
 - Now template is blackboxed for the sake of simplicity
 - Support static/dynamic-typed environment variable

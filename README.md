@@ -43,7 +43,7 @@ module.exports = EmberGenerateCommand.extend({
 
 5. En *node_modules/angular-cli-env/index.js* añadir *var path = require('path');*
 
-6. Añadir en ** despues del método **, lo siguiente:
+6. Añadir en *node_modules/angular-cli-env/lib/blueprints/index.js* despues del método **, lo siguiente:
 
 ```
 beforeRun: function (rawArgs) {
