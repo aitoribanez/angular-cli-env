@@ -1,4 +1,4 @@
-# angular-cli-env
+# angular-cli-generate-entity
 [![npm version](https://badge.fury.io/js/angular-cli-env.svg)](https://badge.fury.io/js/angular-cli-env)
 
 Angular CLI Env Addon
