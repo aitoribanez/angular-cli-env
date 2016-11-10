@@ -12,7 +12,7 @@ module.exports = {
 
   includedCommands: function () {
     return {
-      'generate': require('./lib/commands/entity')
+      'generate:entity': require('./lib/commands/entity')
     };
   }
 };

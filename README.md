@@ -20,10 +20,10 @@ npm install aitoribanez/angular-cli-generate-entity --save-dev
 ### Generate
 
 ```sh
-ng generate entity [entityName]
+ng generate:entity entity [entityName]
 ```
 
-It'll generate 4 files:
+It'll generate 4 files on *src/app/__name__/*:
 - `__name__.component.css`
 - `__name__.component.html`
 - `__name__.component.spec.ts`
