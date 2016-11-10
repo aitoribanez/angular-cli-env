@@ -1,5 +1,8 @@
+## 0.3.2
+- angular-cli-generate-entity's blueprints are working! Continue modifing blueprints.
+
 ## 0.3.1
-- Blueprints are working! Continue improving blueprint functionality.
+- Blueprints are working.
 
 ## 0.3.0
 - Start to use ember-cli's blueprint as angular-cli do.

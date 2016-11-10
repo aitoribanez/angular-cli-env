@@ -1,7 +1,7 @@
 {
   "name": "angular-cli-generate-entity",
   "description": "Angular CLI addon to create entity crud on backend and frontend.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": "https://github.com/aitoribanez/angular-cli-generate-entity",
   "engines": {
     "node": ">= 4.1.0"
@@ -21,7 +21,5 @@
   "keywords": [
     "ember-addon"
   ],
-  "dependencies": {
-    "lodash": "^4.15.0"
-  }
+  "dependencies": {}
 }
