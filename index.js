@@ -10,9 +10,9 @@ module.exports = {
     return path.join(__dirname, './lib/blueprints');
   },
 
-  includedCommands: function() {
+  includedCommands: function () {
     return {
-      'entity': require('./lib/commands/entity')
+      'generate:entity': require('./lib/commands/entity')
     };
   }
 };
