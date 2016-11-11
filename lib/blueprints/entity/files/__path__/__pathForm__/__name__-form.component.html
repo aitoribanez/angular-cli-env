@@ -1,0 +1,39 @@
+<h2>{{ type }} <%= entityName %></h2>
+
+<a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast 1!</a>
+
+<form (ngSubmit)="call()" [formGroup]="<%= entityName %>Form">
+  <div>
+    <label>Name</label>
+    <input formControlName="name">
+    <div *ngIf="nameCtrl.dirty && nameCtrl.hasError('required')">Name is required</div>
+    <div *ngIf="nameCtrl.dirty && nameCtrl.hasError('minlength')">Name should be 4
+characters min</div>
+  </div>
+
+  <div>
+    <label>Photo</label>
+    <input formControlName="photo">
+    <div *ngIf="photoCtrl.dirty && photoCtrl.hasError('required')">Photo is required</div>
+  </div>
+
+   <div>
+    <label>Difficulty</label>
+    <input formControlName="difficulty">
+    <div *ngIf="difficultyCtrl.dirty && difficultyCtrl.hasError('required')">Difficulty is required</div>
+  </div>
+
+  <div>
+    <label>Seed time</label>
+    <input formControlName="seedtime">
+    <div *ngIf="seedtimeCtrl.dirty && seedtimeCtrl.hasError('required')">Seedtime is required</div>
+  </div>
+
+  <div>
+    <label>Collect time</label>
+    <input formControlName="collecttime">
+    <div *ngIf="collecttimeCtrl.dirty && collecttimeCtrl.hasError('required')">Collect time is required</div>
+  </div>
+
+  <button type="submit" [disabled]="!<%= entityName %>Form.valid">{{ type }}</button>
+</form>

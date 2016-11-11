@@ -7,9 +7,9 @@ import { toast } from 'angular2-materialize'
 import ApiWrapperService from '../../../services/apiWrapper.service';
 
 @Component({
-  selector: '<%= selector %>',
-  templateUrl: './<%= selector %>.component.html',
-  styleUrls: ['./<%= selector %>.component.css'],
+  selector: '<%= selector %>-form',
+  templateUrl: './<%= selector %>-form.component.html',
+  styleUrls: ['./<%= selector %>-form.component.css'],
   // providers: [ApiWrapperService, <%= entityNameCapitalize %>Resolve]
 })
 
@@ -48,6 +48,11 @@ export class <%= entityNameCapitalize %>FormComponent implements OnInit {
     else if(this.type === 'edit') { this.edit() }
     else { this.destroy(this.route.snapshot.params['id']) }
   }
+
+/* pr(evt) {
+  console.log("prAAA")
+   this.<%= entityName %>FormComponent.emit('e551fcb0-625a-4421-949d-17e3109e0342');
+} */
 
  /**
  * Save <%= entityName %> on data store
