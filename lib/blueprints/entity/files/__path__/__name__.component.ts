@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { UUID } from 'angular2-uuid';
 import { toast } from 'angular2-materialize'
 
-import ApiWrapperService from '../../../services/apiWrapper.service';
+import ApiWrapperService from '../services/apiWrapper.service';
 
 @Component({
   selector: '<%= selector %>',
@@ -13,7 +13,7 @@ import ApiWrapperService from '../../../services/apiWrapper.service';
   // providers: [ApiWrapperService, <%= entityNameCapitalize %>Resolve]
 })
 
-export class <%= entityNameCapitalize %>FormComponent implements OnInit {
+export class <%= entityNameCapitalize %>Component implements OnInit {
   nameCtrl: FormControl;
   photoCtrl: FormControl;
   difficultyCtrl: FormControl;

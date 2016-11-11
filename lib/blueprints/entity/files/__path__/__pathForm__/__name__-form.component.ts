@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { UUID } from 'angular2-uuid';
 import { toast } from 'angular2-materialize'
 
-import ApiWrapperService from '../../../services/apiWrapper.service';
+import ApiWrapperService from '../services/apiWrapper.service';
 
 @Component({
   selector: '<%= selector %>-form',
