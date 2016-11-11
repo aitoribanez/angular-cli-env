@@ -8,6 +8,7 @@ export class <%= entityNameCapitalize %>Resolve implements Resolve<any> {
   constructor(private <%= entityName %>Service: ApiWrapperService) {}
 
   resolve(route: ActivatedRouteSnapshot) {
-    return this.<%= entityName %>Service.get('<%= entityName %>s');
-  }  
+    return this.<%= entityName %>Service.one(`<%= entityName %>s/${route.params['id']}`);
+  }
+
 }
