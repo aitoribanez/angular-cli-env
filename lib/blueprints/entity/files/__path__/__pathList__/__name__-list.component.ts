@@ -26,8 +26,8 @@ export class <%= entityNameCapitalize %>ListComponent implements OnInit {
     let <%= entityName %>s = this.route.snapshot.data['<%= entityName %>s'];
 
     <%= entityName %>s.map(obj => { 
-      obj.collecttime = this._toString(obj.collecttime, config.es.months);
-      obj.seedtime = this._toString(obj.seedtime, config.es.months);
+     // obj.collecttime = this._toString(obj.collecttime, config.es.months);
+     // obj.seedtime = this._toString(obj.seedtime, config.es.months);
     })
 
     this.<%= entityName %>s = <%= entityName %>s.reverse();
