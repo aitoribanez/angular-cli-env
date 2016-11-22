@@ -67,9 +67,12 @@ module.exports = {
             this.project.ngConfigObj.get('defaults.spec.component');
         // console.log("entityName", stringUtils.camelize(options.args[1]))
         // console.log("capitalize", stringUtils.classify(options.args[1]))
+        
+        //  var stringField = new StringField()
         var stringField = StringField.StringField.prototype;
         console.log("EMPIEZA", stringField);
         this.fields = stringField.template();
+        
         return {
             dynamicPath: this.dynamicPath.dir.replace(this.dynamicPath.appRoot, ''),
             flat: options.flat,

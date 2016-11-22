@@ -31,6 +31,15 @@ with those 4 files:
 
 You only need to this **once**.
 
+
+### Typescript
+
+We use typescript for blueprint index controller and for fields lib.
+```sh
+npm install -g typescript
+```
+- Examples: tsc lib/fields/*ts OR lib/blueprints/entity/index.ts
+
 ## Miscelania
 
 ### Pasos seguidos para customizar el addon llamado angular-cli-env para que use blueprints
