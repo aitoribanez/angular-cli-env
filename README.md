@@ -31,7 +31,7 @@ with those 4 files:
 
 You only need to this **once**.
 
-## Miscelania
+## Miscelanias
 
 ### Pasos seguidos para customizar el addon llamado angular-cli-env para que use blueprints
 
