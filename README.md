@@ -33,6 +33,14 @@ You only need to this **once**.
 
 ## Miscelanias
 
+### Typescript
+
+We use typescript for blueprint index controller and for fields lib.
+```sh
+npm install -g typescript
+```
+- Examples: tsc lib/fields/*ts OR lib/blueprints/entity/index.ts
+
 ### Pasos seguidos para customizar el addon llamado angular-cli-env para que use blueprints
 
 (hacer uso del "hook" blueprintsPath, extender el objeto de configuracion del comando a EmberGenerateCommand.extend
