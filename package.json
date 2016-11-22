@@ -19,7 +19,8 @@
   "license": "GNUv3",
   "devDependencies": {},
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "angular-cli"
   ],
   "dependencies": {}
 }

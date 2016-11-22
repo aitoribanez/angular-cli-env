@@ -2,6 +2,7 @@
 
 <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast 1!</a>
 
+<%= fields %>
 <form (ngSubmit)="call()" [formGroup]="<%= entityName %>Form">
   <div>
     <label>Name</label>
