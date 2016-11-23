@@ -3,5 +3,5 @@ export interface FieldI {
   name: string;
   createdAt: Date;
   updatedAt: Date;
-  template();
+  template(entityName, entityNameCapitalize, field);
 }
