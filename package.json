@@ -1,19 +1,19 @@
 {
   "name": "angular-cli-generate-entity",
   "description": "Angular CLI addon to create entity crud on backend and frontend.",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "repository": "https://github.com/aitoribanez/angular-cli-generate-entity",
   "engines": {
     "node": ">= 4.1.0"
   },
   "contributors": [
     {
-      "name": "Antony Budianto",
-      "email": "antonybudianto@gmail.com"
-    },
-    {
       "name": "Aitor Ibañez",
       "email": "aitiba@gmail.com"
+    },
+    {
+      "name": "Antony Budianto",
+      "email": "antonybudianto@gmail.com"
     }
   ],
   "license": "GNUv3",

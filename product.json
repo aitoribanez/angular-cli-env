@@ -1,0 +1,15 @@
+{
+  "entitys": [
+    {
+      "name": "product",
+      "fields": {
+        "id": { "type": "string", "class": "style", "required": "required" },
+        "name": { "type": "string" },
+        "photo": { "type": "string" },
+        "difficulty": { "type": "number", "min": 1, "max": 5 },
+        "seedtime": { "type": "number", "min": 1, "max": 5 },
+        "collecttime": { "type": "number", "min": 1, "max": 5 }
+      }
+    }
+  ]
+}

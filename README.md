@@ -18,10 +18,12 @@ npm install aitoribanez/angular-cli-generate-entity --save-dev
 ## Usage
 
 ### Generate
+Having a JSON file as *[entityName].json* with content like *product.json* file.
 
 ```sh
 ng generate:entity entity [entityName]
 ```
+
 It'll generate 1 folder __path__ and inside to components, __pathForm__ and __pathList__
 with those 4 files:
 - `__name__.component.css`
