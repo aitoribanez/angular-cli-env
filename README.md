@@ -24,12 +24,14 @@ Having a JSON file as *[entityName].json* with content like *product.json* file.
 ng generate:entity entity [entityName]
 ```
 
-It'll generate 1 folder __path__ and inside to components, __pathForm__ and __pathList__
+It'll generate 1 folder __path__. Inside two components: __pathForm__ and __pathList__
 with those 4 files:
 - `__name__.component.css`
 - `__name__.component.html`
 - `__name__.component.spec.ts`
 - `__name__.component.ts`
+and *server.js* for backend API. It can be started with:
+*json-server src/app/[entityName]/server.js --id "uuid"*
 
 You only need to this **once**.
 
