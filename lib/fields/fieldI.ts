@@ -1,7 +1,3 @@
-export interface FieldI {
-  id: string;
-  name: string;
-  createdAt: Date;
-  updatedAt: Date;
-  template(entityName, entityNameCapitalize, field);
+export class FieldI {
+  template(entityName, entityNameCapitalize, field) { };
 }
