@@ -1,8 +1,10 @@
-const StringField = require('./stringField');
+import { StringField } from './stringField';
+import { stringUtils } from 'ember-cli-string-utils';
 
 export class Field {
   // Object -> array -> string
-  stringify(fields, entityName, entityNameCapitalize) {
+  stringify(fields, entityName) {
+    const entityNameCapitalize = stringUtils.classify(entityName)
     let object = this._makeFieldsObject(fields, entityName, entityNameCapitalize);
     return this._serverFieldStringify(object);
   }
@@ -12,9 +14,10 @@ export class Field {
   // return an array having as key the field name and value as nodejs function
   // that copies their content directy to server.js file.
   private _makeFieldsObject(fields, entityName, entityNameCapitalize) {
+    // resp = {client: '', server: {}}
     let resp = '';
     let serverFields = [];
-    let stringField = StringField.StringField.prototype;
+    let stringField = StringField.prototype;
 
     if (Object.keys(fields).length > 0) {
       for (let key in fields) {
